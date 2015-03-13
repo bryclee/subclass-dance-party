@@ -1,8 +1,8 @@
-$(document).ready(function(){
+$(document).ready(function() {
   window.dancers = [];
   var arnoldCounter = 0;
 
-  $(".addDancerButton").on("click", function(event){
+  $(".addDancerButton").on("click", function(event) {
     /* This function sets up the click handlers for the create-dancer
      * buttons on dancefloor.html. You should only need to make one small change to it.
      * As long as the "data-dancer-maker-function-name" attribute of a
@@ -32,7 +32,7 @@ $(document).ready(function(){
 
     $('body').append(dancer.$node);
     window.dancers.push(dancer);
-    dancer.$node.mouseover((function(){
+    dancer.$node.mouseover((function() {
       var index = window.dancers.indexOf(dancer);
       window.dancers.splice(index,1);
       // dance.node from body.chi;dren
@@ -53,9 +53,9 @@ $(document).ready(function(){
     }
   });
 
-  $('.interact').on('click', function(event){
+  $('.interact').on('click', function(event) {
     var newlocation = [];
-    for (var i = 0; i < window.dancers.length; i++){
+    for (var i = 0; i < window.dancers.length; i++) {
       newlocation.push(window.dancers[i].interact());
     }
     for (var i = 0; i < newlocation.length; i++) {
